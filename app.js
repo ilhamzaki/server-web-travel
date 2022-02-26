@@ -6,6 +6,9 @@ var logger = require("morgan");
 const methodOverride = require("method-override");
 const session = require("express-session");
 const flash = require("connect-flash");
+// CORS
+const cord = require("cors");
+
 // import mongeoose
 const mongoose = require("mongoose");
 mongoose.connect(
@@ -39,6 +42,8 @@ app.use(
     cookie: { maxAge: 60000 },
   })
 );
+// CORS
+app.use(cors());
 app.use(flash());
 app.use(logger("dev"));
 app.use(express.json());
