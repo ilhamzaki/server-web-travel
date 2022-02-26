@@ -7,7 +7,7 @@ const methodOverride = require("method-override");
 const session = require("express-session");
 const flash = require("connect-flash");
 // CORS
-const cord = require("cors");
+const cors = require("cors");
 
 // import mongeoose
 const mongoose = require("mongoose");
